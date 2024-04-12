@@ -134,7 +134,7 @@ def main():
                 pygame.quit()
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LCTRL and len(yellow_bullets) < MAX_BULLETS:
+                if event.key == pygame.K_SPACE and len(yellow_bullets) < MAX_BULLETS:
                     bullet = pygame.Rect(
                         yellow.x + yellow.width, yellow.y + yellow.height//2 - 2, 10, 5)
                     yellow_bullets.append(bullet)
@@ -156,10 +156,10 @@ def main():
 
         winner_text = ""
         if red_health <= 0:
-            winner_text = "Yellow Wins!"
+            winner_text = "Philipp Wins Gina loses!"
 
         if yellow_health <= 0:
-            winner_text = "Red Wins!"
+            winner_text = "Gina Wins Philipp Loses!"
 
         if winner_text != "":
             draw_winner(winner_text)
